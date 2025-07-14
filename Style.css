@@ -3,18 +3,25 @@ body {
   margin: 0;
   background-color: #f5f5f5;
   color: #222;
+  line-height: 1.6;
 }
+
+/* Добавлен viewport для мобильных */
+/* Вставьте это в <head> HTML: <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
 
 header {
   background-color: #fff;
   text-align: center;
   padding: 40px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  max-width: 120px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px; /* можно менять под дизайн */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 h1 {
@@ -36,6 +43,11 @@ h1 {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #1f1fd6;
 }
 
 main {
@@ -44,11 +56,13 @@ main {
   margin: 0 auto;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
   color: #2a2aff;
+  font-size: 24px;
+  margin-top: 30px;
 }
 
 ul {
@@ -60,4 +74,44 @@ footer {
   padding: 20px;
   color: #aaa;
   font-size: 14px;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .buy-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  main {
+    padding: 30px 15px;
+    border-radius: 8px;
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .buy-button {
+    width: 100%;
+    text-align: center;
+  }
 }
