@@ -6,9 +6,6 @@ body {
   line-height: 1.6;
 }
 
-/* Добавлен viewport для мобильных */
-/* Вставьте это в <head> HTML: <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
-
 header {
   background-color: #fff;
   text-align: center;
@@ -18,7 +15,7 @@ header {
 
 .logo {
   width: 100%;
-  max-width: 300px; /* можно менять под дизайн */
+  max-width: 300px;
   height: auto;
   display: block;
   margin: 0 auto 20px;
