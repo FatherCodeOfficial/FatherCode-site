@@ -15,10 +15,17 @@ header {
 
 .logo {
   width: 100%;
-  max-width: 300px;
+  max-width: 300px; /* ограничение на ПК */
   height: auto;
   display: block;
   margin: 0 auto 20px;
+}
+
+/* Адаптация логотипа под мобильные устройства */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 100%; /* растягивается на всю ширину */
+  }
 }
 
 h1 {
@@ -92,10 +99,6 @@ footer {
     padding: 30px 15px;
     border-radius: 8px;
   }
-
-  .logo {
-    max-width: 200px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -110,5 +113,10 @@ footer {
   .buy-button {
     width: 100%;
     text-align: center;
+  }
+
+  /* Можно немного увеличить общий текст */
+  body {
+    font-size: 16px;
   }
 }
