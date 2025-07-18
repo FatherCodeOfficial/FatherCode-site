@@ -1,3 +1,4 @@
+/* Основные стили */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,38 +7,43 @@ body {
   line-height: 1.6;
 }
 
+/* Шапка */
 header {
   background-color: transparent;
   box-shadow: none;
-  padding: 40px 20px;
+  padding: 20px 20px; /* Уменьшили отступ сверху */
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
+/* Логотип */
 .logo {
-  width: 600px;
-  height: 600px;
+  width: 900px;
+  height: 900px;
   object-fit: contain;
   display: block;
   margin: 0 auto 20px;
 }
 
+/* Заголовок */
 h1 {
   margin: 0;
   font-size: 24px;
   color: #fff;
 }
 
+/* Подзаголовок */
 .subtitle {
   font-size: 14px;
   margin: 10px 0 20px;
   color: #ccc;
 }
 
+/* Кнопка */
 .buy-button {
   display: inline-block;
-  background-color: #2a2aff;
-  color: white;
+  background-color: #00f5d4; /* Новый яркий цвет кнопки */
+  color: #000; /* Тёмный текст на ярком фоне для контраста */
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
@@ -46,9 +52,10 @@ h1 {
 }
 
 .buy-button:hover {
-  background-color: #1f1fd6;
+  background-color: #00d6b8; /* Темнее при наведении */
 }
 
+/* Основной контент */
 main {
   max-width: 600px;
   margin: 0 auto 40px;
@@ -58,8 +65,9 @@ main {
   color: #fff;
 }
 
+/* Заголовки секций */
 h2 {
-  color: #2a2aff;
+  color: #00f5d4; /* Яркий бирюзовый цвет */
   font-size: 20px;
   margin-top: 20px;
 }
