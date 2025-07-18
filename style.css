@@ -7,20 +7,17 @@ body {
 }
 
 header {
-  background-color: #fff;
-  text-align: center;
+  background-color: transparent;
+  box-shadow: none;
   padding: 40px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #222;
-  border-radius: 12px;
+  text-align: center;
   margin: 40px auto;
-  max-width: 600px;
 }
 
 .logo {
-  width: 300px; /* Фиксированная ширина */
-  height: 300px; /* Такой же высота — квадратный */
-  object-fit: contain; /* Сохраняет пропорции */
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
   display: block;
   margin: 0 auto 20px;
 }
@@ -28,13 +25,13 @@ header {
 h1 {
   margin: 0;
   font-size: 24px;
-  color: #222;
+  color: #fff;
 }
 
 .subtitle {
   font-size: 14px;
   margin: 10px 0 20px;
-  color: #555;
+  color: #ccc;
 }
 
 .buy-button {
@@ -55,11 +52,10 @@ h1 {
 main {
   max-width: 600px;
   margin: 0 auto 40px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  color: #222;
+  padding: 0 20px;
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
 }
 
 h2 {
@@ -70,6 +66,11 @@ h2 {
 
 ul {
   padding-left: 20px;
+}
+
+li {
+  color: #fff;
+  margin-bottom: 8px;
 }
 
 footer {
@@ -104,9 +105,5 @@ footer {
   header {
     margin: 20px 15px;
     padding: 20px;
-  }
-
-  body {
-    margin: 0 10px;
   }
 }
