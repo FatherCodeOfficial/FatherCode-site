@@ -51,7 +51,7 @@ h1 {
   transition: background-color 0.3s ease;
   margin: 0 auto 20px; /* Центрируем кнопку */
   position: relative;
-  top: -100px; /* Сдвигаем кнопку вверх на 60px */
+  top: -150px; /* Сдвигаем кнопку вверх на 60px */
   z-index: 10; /* Чтобы кнопка была поверх текста */
 }
 
