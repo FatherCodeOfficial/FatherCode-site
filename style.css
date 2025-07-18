@@ -108,12 +108,11 @@ footer {
   }
 
   .buy-button {
- width: 100%;
-  text-align: center;
-  font-size: 14px;
-  display: block;
-  margin: 0 auto;
-}
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    top: -40px; /* Меньше сдвигаем на мобильных */
+    padding: 10px;
   }
 
   main,
