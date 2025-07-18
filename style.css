@@ -11,9 +11,9 @@ body {
 header {
   background-color: transparent;
   box-shadow: none;
-  padding: 20px 20px; /* Уменьшили отступ сверху */
+  padding: 0px 20px; /* Уменьшили отступ сверху */
   text-align: center;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 
 /* Логотип */
