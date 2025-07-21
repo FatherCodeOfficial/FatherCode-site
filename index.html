@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  
+
   <meta name="description" content="Father Code Token (FCD) — утилити-токен бренда «Отцовский Ремень». Купить токен, узнать о проекте и услугах.">
   <meta name="keywords" content="FCD, Father Code Token, криптовалюта, NFT, Web3, Отцовский Ремень, купить токен">
   <meta name="author" content="Father Code">
@@ -18,14 +18,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="icon" href="/favicon.ico" />
 </head>
-<body>
 
+<body>
   <header>
     <img src="assets/logo.png" alt="Father Code Logo" class="logo" />
     <h1>Father Code Token — FCD</h1>
@@ -40,31 +41,12 @@
     </a>
   </header>
 
-  <!-- Новый блок: добавление токена в MetaMask -->
-  <section id="add-to-metamask" style="margin-top: 40px; padding: 20px; background-color: #000000; border-radius: 12px;">
-    <h2 style="font-size: 20px; font-weight: 600;">🦊 Как добавить токен FCD в MetaMask</h2>
-    <ol style="line-height: 1.6;">
-      <li>Откройте <strong>MetaMask</strong> и переключитесь на сеть <strong>Polygon</strong>.</li>
-      <li>Нажмите кнопку ниже:</li>
-    </ol>
-    <button 
-      onclick="addFCDToken()" 
-      style="margin-top: 10px; padding: 10px 20px; font-size: 16px; font-weight: 600; background-color: #f6a00; color: white; border: none; border-radius: 8px; cursor: pointer;"
-    >
-      <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask" style="height: 20px; vertical-align: middle; margin-right: 8px;">
-      Добавить FCD в MetaMask
-    </button>
-    <p style="margin-top: 10px; font-size: 14px; color: #333;">
-      Адрес токена: <code>0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A</code>
-    </p>
-  </section>
-
   <main>
     <section>
       <h2>О проекте</h2>
       <p>
         Father Code Token (FCD) — это утилити-токен бренда «Отцовский Ремень», работающего с 2010 года. 
-        Проект объединяет торговлю, музыку, вирусные клипы TikTok/Instagram, токен FCD и Web3-инфраструктуру.
+        Проект объединяет торговлю, музыку, TikTok/Instagram-контент, токен FCD, NFT и Web3-элементы.
       </p>
     </section>
 
@@ -76,6 +58,17 @@
         <li>👕 Одежда Father Code: худи, футболки, куртки</li>
         <li>🎁 Подарочные наборы с токеном и подсказками</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Добавить FCD в MetaMask</h2>
+      <p>Нажмите на кнопку ниже, чтобы добавить токен FCD в свой MetaMask кошелёк.</p>
+      <button 
+        onclick="addToken()" 
+        style="background-color:#00f5d4; color:#000; padding:10px 20px; font-weight:bold; border:none; border-radius:8px; cursor:pointer; margin-top:10px;"
+      >
+        🦊 Добавить FCD в MetaMask
+      </button>
     </section>
 
     <section>
@@ -92,9 +85,8 @@
     <p>&copy; 2025 Father Code. Все права защищены.</p>
   </footer>
 
-  <!-- Сценарий: Добавление токена в MetaMask -->
   <script>
-    async function addFCDToken() {
+    async function addToken() {
       try {
         const wasAdded = await window.ethereum.request({
           method: 'wallet_watchAsset',
@@ -112,14 +104,13 @@
         if (wasAdded) {
           alert('Токен FCD добавлен в MetaMask!');
         } else {
-          alert('Пользователь отменил добавление токена.');
+          alert('Добавление токена отменено.');
         }
       } catch (error) {
         console.error(error);
-        alert('Ошибка при добавлении токена.');
+        alert('Произошла ошибка при добавлении токена.');
       }
     }
   </script>
-
 </body>
 </html>
