@@ -4,28 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   
-  <!-- SEO: Заголовок и описание -->
   <meta name="description" content="Father Code Token (FCD) — утилити-токен бренда «Отцовский Ремень». Купить токен, узнать о проекте и услугах.">
   <meta name="keywords" content="FCD, Father Code Token, криптовалюта, NFT, Web3, Отцовский Ремень, купить токен">
   <meta name="author" content="Father Code">
 
-  <!-- Open Graph для соцсетей -->
   <meta property="og:title" content="Father Code Token — FCD" />
   <meta property="og:description" content="Father Code Token (FCD) — утилити-токен бренда «Отцовский Ремень». Купить токен, узнать о проекте и услугах." />
-  <meta property="og:image" content="https://fathercode.pro/assets/logo.png " />
-  <meta property="og:url" content="https://fathercode.pro/ " />
+  <meta property="og:image" content="https://fathercode.pro/assets/logo.png" />
+  <meta property="og:url" content="https://fathercode.pro/" />
   <meta property="og:type" content="website" />
 
-  <!-- Заголовок страницы -->
   <title>Father Code Token — FCD | Утилити-токен бренда «Отцовский Ремень»</title>
 
-  <!-- Подключение Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Подключение стилей -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Фавиконки и manifest -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -39,7 +31,7 @@
     <h1>Father Code Token — FCD</h1>
     <p class="subtitle">Утилити-токен бренда «Отцовский Ремень»</p>
     <a 
-      href=" https://dapp.quickswap.exchange/swap/best/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A " 
+      href="https://dapp.quickswap.exchange/swap/best/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A" 
       class="buy-button" 
       target="_blank"
       rel="noopener noreferrer"
@@ -47,6 +39,25 @@
       Купить токен
     </a>
   </header>
+
+  <!-- Новый блок: добавление токена в MetaMask -->
+  <section id="add-to-metamask" style="margin-top: 40px; padding: 20px; background-color: #f5f5f5; border-radius: 12px;">
+    <h2 style="font-size: 20px; font-weight: 600;">🦊 Как добавить токен FCD в MetaMask</h2>
+    <ol style="line-height: 1.6;">
+      <li>Откройте <strong>MetaMask</strong> и переключитесь на сеть <strong>Polygon</strong>.</li>
+      <li>Нажмите кнопку ниже:</li>
+    </ol>
+    <button 
+      onclick="addFCDToken()" 
+      style="margin-top: 10px; padding: 10px 20px; font-size: 16px; font-weight: 600; background-color: #ff6a00; color: white; border: none; border-radius: 8px; cursor: pointer;"
+    >
+      <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+      Добавить FCD в MetaMask
+    </button>
+    <p style="margin-top: 10px; font-size: 14px; color: #333;">
+      Адрес токена: <code>0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A</code>
+    </p>
+  </section>
 
   <main>
     <section>
@@ -80,6 +91,35 @@
   <footer>
     <p>&copy; 2025 Father Code. Все права защищены.</p>
   </footer>
+
+  <!-- Сценарий: Добавление токена в MetaMask -->
+  <script>
+    async function addFCDToken() {
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: '0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A',
+              symbol: 'FCD',
+              decimals: 18,
+              image: 'https://fathercode.pro/assets/logo.png',
+            },
+          },
+        });
+
+        if (wasAdded) {
+          alert('Токен FCD добавлен в MetaMask!');
+        } else {
+          alert('Пользователь отменил добавление токена.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('Ошибка при добавлении токена.');
+      }
+    }
+  </script>
 
 </body>
 </html>
