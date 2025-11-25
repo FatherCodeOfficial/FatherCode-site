@@ -1,102 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Father Code Token (FCD) — утилити-токен бренда «Отцовский Ремень». Купить токен, узнать о проекте и услугах.">
   <meta name="keywords" content="FCD, Father Code Token, криптовалюта, NFT, Web3, Отцовский Ремень, купить токен">
   <meta name="author" content="Father Code">
 
-  <meta property="og:title" content="Father Code Token — FCD" />
-  <meta property="og:description" content="Father Code Token (FCD) — утилити-токен бренда «Отцовский Ремень». Купить токен, узнать о проекте и услугах." />
-  <meta property="og:image" content="https://fathercode.pro/assets/logo.png" />
-  <meta property="og:url" content="https://fathercode.pro/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Father Code Token — FCD">
+  <meta property="og:description" content="Father Code Token (FCD) — утилити-токен бренда «Отцовский Ремень». Купить токен, узнать о проекте и услугах.">
+  <meta property="og:image" content="https://fathercode.pro/assets/logo.png">
+  <meta property="og:url" content="https://fathercode.pro/">
+  <meta property="og:type" content="website">
 
   <title>Father Code Token — FCD | Утилити-токен бренда «Отцовский Ремень»</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.ico">
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
 </head>
-<body>
+<body class="bg-gray-900 text-white font-sans">
+  <custom-navbar></custom-navbar>
 
-  <header>
-    <img src="assets/logo.png" alt="Father Code Logo" class="logo" />
-    <h1>Father Code Token — FCD</h1>
-    <p class="subtitle">Утилити-токен бренда «Отцовский Ремень»</p>
-    <a 
-      href="https://dapp.quickswap.exchange/swap/best/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A" 
-      class="buy-button" 
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Купить токен
-    </a>
-  </header>
-
- <!-- Новый блок: добавление токена в MetaMask -->
-<section id="add-to-metamask" style="margin-top: 40px; padding: 20px; background-color: #111; border-radius: 12px; color: #fff;">
-  <h2 style="font-size: 20px; font-weight: 600; color: #00f5d4;">🦊 Как добавить токен FCD в MetaMask</h2>
-  <ol style="line-height: 1.6;">
-    <li> После покупки токена на QuickSwap необходимо добавить FCD в MetaMask. Откройте <strong>MetaMask</strong> и переключитесь на сеть <strong>Polygon</strong>.</li>
-    <li>Нажмите кнопку ниже:</li>
-  </ol>
-  <button 
-    onclick="addFCDToken()" 
-    style="margin-top: 10px; padding: 12px 24px; font-size: 16px; font-weight: 600; background-color: #00f5d4; color: #000; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;"
-  >
-    <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask" style="height: 20px; vertical-align: middle; margin-right: 8px;">
-    Добавить FCD в MetaMask
-  </button>
-  <p style="margin-top: 10px; font-size: 14px; color: #ccc;">
-    Адрес токена: <code style="color: #00f5d4;">0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A</code>
-  </p>
-</section>
-
-
-  <main>
-    <section>
-      <h2>О проекте</h2>
-      <p>
-        Father Code Token (FCD) — это утилити-токен бренда «Отцовский Ремень», работающего с 2010 года. 
-        Проект объединяет розничную торговлю, музыку, вирусные клипы TikTok/Instagram, токен FCD и Web3-инфраструктуру.
-      </p>
+  <main class="container mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-20">
+      <div class="max-w-4xl mx-auto">
+        <img src="assets/logo.png" alt="Father Code Logo" class="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-cyan-400 p-1">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Father Code Token</h1>
+        <p class="text-xl text-gray-300 mb-8">Утилити-токен бренда «Отцовский Ремень»</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://dapp.quickswap.exchange/swap/best/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A" 
+             class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30"
+             target="_blank">
+            Купить токен
+          </a>
+          <button onclick="addFCDToken()" 
+                  class="px-8 py-3 bg-gray-800 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 flex items-center justify-center gap-2">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/metamask-2728406-2261817.png" alt="MetaMask" class="h-5">
+            Добавить в MetaMask
+          </button>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Наши услуги</h2>
-      <ul>
-        <li>🪙 Токен FCD — доступ к уникальным товарам и квесту "Охота за кладом"</li>
-        <li>👖 Кожаные изделия: ремни, портмоне, аксессуары</li>
-        <li>👕 Одежда Father Code: худи, футболки, куртки</li>
-        <li>🎁 Подарочные наборы с токеном и подсказками</li>
-      </ul>
+    <!-- About Section -->
+    <section class="mb-20">
+      <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl p-8 shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-cyan-400">О проекте</h2>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Father Code Token (FCD) — это утилити-токен бренда «Отцовский Ремень», работающего с 2010 года. 
+          Проект объединяет торговлю, музыку, вирусные клипы TikTok/Instagram, токен FCD и Web3-инфраструктуру.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Контакты</h2>
-      <p>
-        <br>
-        ✉️ fathercodeofficial@gmail.com<br>
+    <!-- Services Section -->
+    <section class="mb-20">
+      <h2 class="text-3xl font-bold mb-8 text-center text-cyan-400">Наши услуги</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500 p-2 rounded-lg mr-4">
+              <i data-feather="dollar-sign" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold">Токен FCD</h3>
+          </div>
+          <p class="text-gray-300">Доступ к уникальным товарам и квесту "Охота за кладом"</p>
+        </div>
         
-      </p>
+        <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-500 p-2 rounded-lg mr-4">
+              <i data-feather="shopping-bag" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold">Кожаные изделия</h3>
+          </div>
+          <p class="text-gray-300">Ремни, портмоне, аксессуары высшего качества</p>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="bg-purple-500 p-2 rounded-lg mr-4">
+              <i data-feather="shirt" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold">Одежда Father Code</h3>
+          </div>
+          <p class="text-gray-300">Худи, футболки, куртки с уникальным дизайном</p>
+        </div>
+        
+        <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="bg-pink-500 p-2 rounded-lg mr-4">
+              <i data-feather="gift" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold">Подарочные наборы</h3>
+          </div>
+          <p class="text-gray-300">С токеном и подсказками для настоящих ценителей</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Token Info Section -->
+    <section class="mb-20 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-cyan-400">Информация о токене</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Адрес токена:</h3>
+          <div class="bg-gray-700 p-3 rounded-lg overflow-x-auto">
+            <code class="text-cyan-400">0x00F388ea1b6fCfe76Ea1C1A244A9E2CA0c43A56A</code>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Сеть:</h3>
+          <div class="flex items-center">
+            <img src="https://cryptologos.cc/logos/polygon-matic-logo.png" alt="Polygon" class="h-8 mr-2">
+            <span class="text-lg">Polygon (MATIC)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center text-cyan-400">Контакты</h2>
+      <div class="bg-gray-800 rounded-xl p-8 text-center">
+        <div class="flex flex-col items-center">
+          <div class="bg-gray-700 p-4 rounded-full mb-4">
+            <i data-feather="mail" class="text-cyan-400 w-8 h-8"></i>
+          </div>
+          <a href="mailto:fathercodeofficial@gmail.com" class="text-xl hover:text-cyan-400 transition-colors">
+            fathercodeofficial@gmail.com
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Father Code. Все права защищены.</p>
-  </footer>
+  <custom-footer></custom-footer>
 
-  <!-- Сценарий: Добавление токена в MetaMask -->
   <script>
+    feather.replace();
+    
     async function addFCDToken() {
       try {
+        if (!window.ethereum) {
+          alert('Пожалуйста, установите MetaMask!');
+          return;
+        }
+
         const wasAdded = await window.ethereum.request({
           method: 'wallet_watchAsset',
           params: {
@@ -111,16 +167,15 @@
         });
 
         if (wasAdded) {
-          alert('Токен FCD добавлен в MetaMask!');
+          alert('Токен FCD успешно добавлен в MetaMask!');
         } else {
-          alert('Пользователь отменил добавление токена.');
+          alert('Добавление токена отменено.');
         }
       } catch (error) {
         console.error(error);
-        alert('Ошибка при добавлении токена.');
+        alert('Произошла ошибка при добавлении токена.');
       }
     }
   </script>
-
 </body>
 </html>
